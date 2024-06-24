@@ -1,0 +1,145 @@
+:root {
+  --main-clr: hsl(0, 0%, 100%);
+  --accent-clr: hsl(75, 94%, 57%);
+
+  --main-bg-clr: hsl(0, 0%, 8%);
+  --accent-bg-clr: hsl(0, 0%, 12%);
+  --link-bg-clr: hsl(0, 0%, 20%);
+
+  --main-ff: "Inter", sans-serif;
+
+  --main-fw: 400;
+  --link-fw: 600;
+  --accent-fw: 700;
+
+  --main-fs: 0.875rem;
+  --accent-fs: 1.5rem;
+}
+
+/* CSS reset start */
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+
+  line-height: 150%;
+}
+
+img {
+  display: block;
+
+  max-width: 100%;
+}
+/* CSS reset end */
+
+body {
+  height: 100vh;
+
+  /* Allows for vertically centering the container */
+  display: flex;
+
+  color: var(--main-clr);
+  background-color: var(--main-bg-clr);
+
+  font-family: var(--main-ff);
+  font-weight: var(--main-fw);
+  font-size: var(--main-fs);
+  text-align: center;
+}
+
+nav {
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: var(--main-clr);
+  text-decoration: none;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  width: 100%;
+  max-width: 325px;
+
+  margin: auto;
+  padding: 1.5rem;
+
+  background-color: var(--accent-bg-clr);
+
+  border-radius: 0.625rem;
+}
+
+/* The desktop design has a bigger card width and padding, so adjust on a big enough screensize */
+@media (width >= 450px) {
+  .container {
+    max-width: 400px;
+    padding: 2.5rem;
+  }
+}
+
+.developer-headshot {
+  max-width: 100px;
+
+  border-radius: 100%;
+}
+
+.name {
+  font-size: var(--accent-fs);
+}
+
+.location {
+  color: var(--accent-clr);
+
+  font-weight: var(--accent-fw);
+}
+
+.social-links {
+  display: grid;
+  gap: 1rem;
+}
+
+.social-link {
+  /* Display block to fill the whole with of the parent nav element */
+  display: block;
+
+  padding: 0.75rem;
+
+  background-color: var(--link-bg-clr);
+
+  font-weight: var(--link-fw);
+
+  border-radius: 0.625rem;
+}
+
+.social-link:hover,
+.social-link:focus-visible {
+  color: var(--link-bg-clr);
+  background-color: var(--accent-clr);
+}
+
+/* From original HTML file */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: underline;
+}
